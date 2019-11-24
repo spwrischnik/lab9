@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Famous Quote Search </title>
+    </head>
+    <body>
+        
+        <h1> Famous Quote Search </h1>
+
+        <style>
+            body{background-color:powderblue;text-align:center;}
+        </style>
+
+        <form action="/quotes">
+   
+            Keyword: <input type="text" name="keyword">
+            
+            Category: 
+            <select name="category">
+                <option value=""> Select One </option>
+                
+                <% categories.forEach(function(i){ %>
+                
+                    <option> <%=i.category%>  </option>
+                
+                <% }); %>
+                
+            </select><br><br>
+            
+            First Name: <input type="text" name="authorfirst"> <br><br>
+            Last Name: <input type="text" name="authorlast"> <br><br>
+            
+            Gender: <br><input type="radio" name="gender" value=""> No preference<br>
+            <input type="radio" name="gender" value="M"> Male<br>
+            <input type="radio" name="gender" value="F"> Female<br><br>
+            
+            <!--TODO -->
+            <!-- 1. Add dropdown menu with author's names from the database-->
+            <!-- 2. Add radio buttons to search for Male/Female authors -->
+            <!-- 3. Implement searching quotes by author's name and gender -->
+            
+            <button> Search! </button>
+
+        </form>
+
+    </body>
+</html>
